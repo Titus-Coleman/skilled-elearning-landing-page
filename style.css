@@ -1,0 +1,247 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+ 
+  * {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  html, body {
+    height: 100%;
+    object-fit: fill;
+  }
+
+  body {
+    height: 100%;
+    background-image: linear-gradient(168deg, rgba(255,255,255,1) 40%, rgba(225,228,255,1) 60%);
+    background-size: cover;
+    background-attachment: fixed;
+    
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+  
+  picture {
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  button {
+    color: white;
+    border: none;
+    border-radius: 1.75rem;
+    width: 10.438rem;
+    height: 3.5rem;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+
+  }
+  .nav--button {
+  background: #13183F;
+  }
+  .nav--button:hover {
+    background: #666CA3;
+  }
+
+  .hero--button {
+    background: linear-gradient(#FF6F48, #F02AA6);
+    
+  }
+
+  .hero--button:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+  }
+
+  .footer--button {
+    background: linear-gradient(#4851ff,#F02AA6 );
+  }
+
+  .footer--button:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+  }
+
+  .navbar {
+    display: flex;
+    /* gap: 6rem; */
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    background: transparent;
+ 
+  }
+
+  p {
+    font-weight: 500;
+    line-height: 2rem;
+    font-size: 1rem;
+  }
+
+  .intro {
+    display: grid;
+  }
+
+  .intro-detail > * {
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .intro-detail > h1 {
+    font-size: 2.5rem;
+  }
+
+
+  .page-cards {
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+
+  }
+
+  .card{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    background-color: white;
+    margin-bottom: 3rem;
+  }
+  .card > img {
+    position: absolute;
+    top: -1.75rem;
+  }
+
+  .card--details {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card--title {
+    padding-bottom: 1rem;
+  }
+
+
+  .card--link {
+    position: absolute;
+    bottom: 0;
+    color: #F74780;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .first {
+    background: linear-gradient(#FF6F48, #F02AA6 );
+    color: white;
+    /* padding: 1rem; */
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  footer {
+    /* position: fixed; */
+    bottom:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #13183F;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .footer--logo {
+    width: 5.563rem;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    .navbar {
+      padding: 1.5rem 2rem 0 2rem;
+      align-items: center;
+      
+    }
+    .intro { 
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 3rem;
+      height: 35rem;
+    }
+    .intro-detail {
+      margin-top: 7rem;
+      margin-left: 1rem;
+    }
+
+    picture > * {
+      object-position: -0.4rem -10rem;
+    }
+    .page-cards {
+      grid-template-columns: 1fr 1fr;
+      margin: 0 1rem 0 1rem;
+      gap: 1rem;
+     
+    }
+
+    footer {
+      margin-top: 2rem;
+      align-items: center;
+      padding: 2.25rem;
+    }
+  }
+  @media (min-width: 769px) {
+    .navbar {
+      padding: 1.5rem 2rem 0.5rem 2rem;
+      align-items: center;
+      width: 100%;
+      
+    }
+    .intro { 
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 8rem;
+      height: 45rem;
+    }
+    .intro-detail {
+      margin-top: 12rem;
+      margin-left: 0.5rem;
+    }
+
+    .intro-detail > h1 {
+      font-size: 4rem;
+    }
+
+    .intro-detail > p {
+      font-size: 1.5rem;
+    }
+
+    picture > * {
+      object-position: -0.8rem -12rem;
+      z-index: 0 !important;
+    }
+    .page-cards {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 0 1rem 0 1rem;
+      gap: 1rem;
+     
+    }
+
+    footer {
+      /* margin-top: 2rem; */
+      align-items: center;
+      /* padding: 2.25rem; */
+    }
+  }
